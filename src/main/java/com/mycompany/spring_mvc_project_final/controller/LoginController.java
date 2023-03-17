@@ -51,7 +51,7 @@ public class LoginController {
 
         }
 
-        return "user/home";
+        return "student/index";
     }
 
     @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
