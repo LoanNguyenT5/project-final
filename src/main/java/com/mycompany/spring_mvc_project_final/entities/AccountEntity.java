@@ -42,7 +42,7 @@ public class AccountEntity implements Serializable {
     @Enumerated(EnumType.STRING)
     private UserStatus status;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "account_role",
             joinColumns = @JoinColumn(name = "user_id",
                     referencedColumnName = "id"),
