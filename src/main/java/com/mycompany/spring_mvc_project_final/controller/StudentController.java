@@ -29,11 +29,13 @@ public class StudentController {
 	@Autowired
 	StudentRepository studentRepository;
 	@RequestMapping(value = "/sendMail")
-	public void testSendMail() throws IOException {
+	public ModelAndView testSendMail(ModelAndView model) throws IOException {
 		// Send mail
 		System.out.println("Send Mail ==>");
-		sendEmail("loannguyen1501@gmail.com","Subject", "Hello all");
-
+		String email = "loannguyen1501@gmail.com";
+		//sendEmail(email,"Subject", "Hello all");
+		model.addObject("msg", email);
+		return new ModelAndView("student/email");
 	}
 	public void sendEmail(String recipient, String subject, String body) {
 		MimeMessage message = javaMailSender.createMimeMessage();
@@ -46,7 +48,6 @@ public class StudentController {
 		} catch (MessagingException e) {
 			e.printStackTrace();
 		}
-
 	}
 	@RequestMapping(value = "/insertImage", method = RequestMethod.POST,
 			consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
