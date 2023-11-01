@@ -33,7 +33,7 @@ public class StudentController {
 		// Send mail
 		System.out.println("Send Mail ==>");
 		String email = "loannguyen1501@gmail.com";
-		//sendEmail(email,"Subject", "Hello all");
+		sendEmail(email,"Subject", "Hello all");
 		model.addObject("msg", email);
 		return new ModelAndView("student/email");
 	}
