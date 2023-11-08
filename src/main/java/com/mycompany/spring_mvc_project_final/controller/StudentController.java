@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URLDecoder;
 import java.util.List;
 
 
@@ -51,12 +52,14 @@ public class StudentController {
 	}
 	@RequestMapping(value = "/insertImage", method = RequestMethod.POST,
 			consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
-			produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE,"text/plain;charset=UTF-8"})
 	public ModelAndView save(@RequestParam("name") String name, @RequestParam("age") Integer age,
 							 @RequestPart("photo") MultipartFile photo) {
 		try {
 			StudentEntity s = new StudentEntity();
+			//String decodedText = URLDecoder.decode(name, "UTF-8");
 			s.setName(name);
+
 			s.setAge(age);
 			s.setPhoto(photo.getBytes());
 			studentRepository.save(s);
