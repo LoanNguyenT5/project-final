@@ -1,4 +1,4 @@
-<%@page isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <body>
 <h2>How to insert image in database using Spring MVC</h2>
