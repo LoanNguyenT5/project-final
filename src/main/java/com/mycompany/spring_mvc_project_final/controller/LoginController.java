@@ -58,4 +58,9 @@ public class LoginController {
     public String welcomePage(Model model) {
         return "home";
     }
+
+    @RequestMapping(value = {"/test2"}, method = RequestMethod.GET)
+    public String welcomePage2(Model model) {
+        return "home";
+    }
 }
