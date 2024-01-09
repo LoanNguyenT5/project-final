@@ -16,7 +16,9 @@
     </head>
 
     <body>
-       <jsp:include page="include/header.jsp"/>
+    <h2>${msg}</h2>
+    <jsp:include page="include/header.jsp"/>
+
 
     </body>
 
