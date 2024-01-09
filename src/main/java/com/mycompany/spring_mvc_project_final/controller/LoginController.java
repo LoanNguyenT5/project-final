@@ -5,22 +5,15 @@
  */
 package com.mycompany.spring_mvc_project_final.controller;
 
-import com.mycompany.spring_mvc_project_final.entities.AccountEntity;
-import com.mycompany.spring_mvc_project_final.entities.RoleEntity;
-import com.mycompany.spring_mvc_project_final.enums.Role;
-import com.mycompany.spring_mvc_project_final.enums.UserStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+
 
 @Controller
 public class LoginController {
