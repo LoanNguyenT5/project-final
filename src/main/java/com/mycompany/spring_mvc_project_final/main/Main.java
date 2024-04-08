@@ -29,11 +29,11 @@ public class Main {
         return encoder.encode(password);
     }
 
-    public static Refund refundOrder(String orderId, double amount) throws IOException {
-        RefundRequest request = new RefundRequest();
-        request.amount(new com.paypal.payments.Money().currencyCode("USD").value(String.valueOf(amount)));
-
-        HttpResponse<Refund> response = request.client().execute(request);
-        return response.result();
-    }
+//    public static Refund refundOrder(String orderId, double amount) throws IOException {
+//        RefundRequest request = new RefundRequest();
+//        request.amount(new com.paypal.payments.Money().currencyCode("USD").value(String.valueOf(amount)));
+//
+//        HttpResponse<Refund> response = request.client().execute(request);
+//        return response.result();
+//    }
 }
