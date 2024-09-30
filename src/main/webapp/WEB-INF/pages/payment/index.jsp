@@ -49,7 +49,7 @@
                             // Xử lý phản hồi từ controller (nếu cần)
                             var response = JSON.parse(xhr.responseText);
                             // Chuyển hướng đến trang cảm ơn
-                            window.location.href = "payment-success");
+                            window.location.href = "payment-success";
                         }
                     };
                     xhr.send(JSON.stringify(fullResponse));
