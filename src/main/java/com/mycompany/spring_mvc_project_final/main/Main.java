@@ -6,14 +6,7 @@
 package com.mycompany.spring_mvc_project_final.main;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import com.paypal.http.HttpResponse;
-import com.paypal.http.serializer.Json;
-import com.paypal.orders.Order;
-import com.paypal.orders.OrdersGetRequest;
-import com.paypal.payments.Capture;
-import com.paypal.payments.CapturesRefundRequest;
-import com.paypal.payments.Refund;
-import com.paypal.payments.RefundRequest;
+
 
 
 import java.io.IOException;

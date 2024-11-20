@@ -17,8 +17,10 @@
 
     <body>
     <h2>${msg}</h2>
-    <jsp:include page="include/header.jsp"/>
 
+    <div>
+        <a href="payment">Payment</a>
+    </div>
 
     </body>
 
